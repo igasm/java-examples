@@ -67,7 +67,13 @@ public class BankTest {
         actualTotalBalances.add(balance.get());
     }
 
-    assertThat(actualTotalBalances).containsOnly(expectedTotalBalance);
+    List<Integer> expectedTotalBalances = new ArrayList <>();
+    IntStream.range(0, actualTotalBalances.size())
+        .forEach( balance -> expectedTotalBalances.add(expectedTotalBalance) );
+
+    //each element should not be equal to expectedTotalBalance
+    //due to interruptions on threats
+    assertThat(actualTotalBalances).doesNotContainSequence(expectedTotalBalances);
 
     executorService.shutdown();
   }
