@@ -1,5 +1,6 @@
 package collections.queue;
 
+
 //to be continued...
 public class LinkedListQueue<E> implements Queue<E>{
 
@@ -39,7 +40,9 @@ public class LinkedListQueue<E> implements Queue<E>{
     public E remove() {
       E removedElement = head.element;
       head = head.next;
-      head.previous = null;
+      if(head != null) {
+        head.previous = null;
+      }
       size--;
       return removedElement;
     }
@@ -69,4 +72,5 @@ public class LinkedListQueue<E> implements Queue<E>{
           return element.toString();
         }
     }
+
 }
