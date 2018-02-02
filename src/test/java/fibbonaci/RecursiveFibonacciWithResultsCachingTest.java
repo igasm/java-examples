@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RecursiveFibonacciTest {
+public class RecursiveFibonacciWithResultsCachingTest {
 
-  RecursiveFibonacci recursiveFibonacci = new RecursiveFibonacci();
+  RecursiveFibonacciWithResultsCaching recursiveFibonacci = new RecursiveFibonacciWithResultsCaching();
 
   @DataProvider
   private Object[][] resultsPoolForNumber(){
@@ -27,4 +27,5 @@ public class RecursiveFibonacciTest {
   public void whenCalculatingNumber_expectedResult(int number, int result){
     assertThat(recursiveFibonacci.calculateWord(number)).isEqualTo(result);
   }
+
 }
