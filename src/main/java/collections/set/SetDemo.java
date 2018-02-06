@@ -1,7 +1,9 @@
 package collections.set;
 
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class SetDemo {
 
@@ -18,7 +20,6 @@ public class SetDemo {
 
     //if two sets contains the same elements, their hash code should be the same
     System.out.println(set1.hashCode() == set2.hashCode());
-
   }
 
 }
