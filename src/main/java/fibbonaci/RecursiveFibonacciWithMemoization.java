@@ -3,7 +3,7 @@ package fibbonaci;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RecursiveFibonacciWithResultsCaching {
+public class RecursiveFibonacciWithMemoization {
 
   private final Map<Integer, Integer> resultMap = new HashMap <>();
 

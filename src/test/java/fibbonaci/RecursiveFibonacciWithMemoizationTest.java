@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RecursiveFibonacciWithResultsCachingTest {
+public class RecursiveFibonacciWithMemoizationTest {
 
-  RecursiveFibonacciWithResultsCaching recursiveFibonacci = new RecursiveFibonacciWithResultsCaching();
+  RecursiveFibonacciWithMemoization recursiveFibonacci = new RecursiveFibonacciWithMemoization();
 
   @DataProvider
   private Object[][] resultsPoolForNumber(){
