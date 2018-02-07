@@ -9,8 +9,9 @@ public class RecursiveFibonacci {
       return 1;
     }else if(number > 1){
       return calculateWord(number-1) + calculateWord(number - 2);
+    }else{
+      throw new UnsupportedOperationException("number must be greater then 0");
     }
-    return 0;
   }
 
 }
