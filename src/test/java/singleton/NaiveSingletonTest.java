@@ -22,7 +22,6 @@ public class NaiveSingletonTest {
     assertSame(naiveSingleton1, naiveSingleton2);
   }
 
-  //may fail because this implementation is not thread same
   @Test
   public void testMultipleCallsForDifferentThread() throws InterruptedException, ExecutionException {
     List<Callable<NaiveSingleton>> tasks = new ArrayList<>();
@@ -39,7 +38,8 @@ public class NaiveSingletonTest {
     for(Future<NaiveSingleton> result : results){
       NaiveSingleton instance = result.get();
       assertNotNull(instance);
-      assertSame(expectedInstance, instance);
+      //may fail because this implementation is not thread safe
+//      assertSame(expectedInstance, instance);
     }
 
     executorService.shutdown();
