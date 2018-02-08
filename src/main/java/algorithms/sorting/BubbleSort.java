@@ -31,4 +31,5 @@ public class BubbleSort {
     array[indexOfFirst] = firstValue;
     array[indexOfSecond] = secondValue;
   }
+
 }

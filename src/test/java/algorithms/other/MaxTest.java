@@ -4,8 +4,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -41,8 +41,8 @@ public class MaxTest {
   public void testing_maxForList(Integer[] array){
     List<Integer> list = Arrays.asList(array);
     Integer actualResult = max.maxForList(list);
-    Collections.sort(list);
-    Integer expectedResult = list.get(list.size()-1);
+    list.sort(Comparator.reverseOrder()); //it will sort list in DESC order
+    Integer expectedResult = list.get(0);
     assertEquals(actualResult, expectedResult);
   }
 
@@ -50,8 +50,7 @@ public class MaxTest {
   public void testing_maxForCollection(Integer[] array){
     Set<Integer> set = new HashSet <>(Arrays.asList(array));
     Integer actualResult = max.maxForCollection(set);
-    Arrays.sort(array);
-    Integer expectedResult = array[array.length - 1];
+    Integer expectedResult = Collections.max(set);
     assertEquals(actualResult, expectedResult);
   }
 }
