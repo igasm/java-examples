@@ -22,7 +22,6 @@ public class BinarySearchRecursiveTest {
     };
   }
 
-
   @Test(dataProvider = "pollOfTargetAndExpectedIndex")
   public void test(int target, int expectedIndex){
     int actualIndex = binarySearch.binaryFind(array, target);
