@@ -2,7 +2,6 @@ package collections.set;
 
 import java.util.Comparator;
 import java.util.HashSet;
-import java.util.Hashtable;
 import java.util.Set;
 import java.util.TreeSet;
 
